@@ -1,0 +1,10 @@
+.ascii-art {
+  color: var(--green);
+  font-size: 0.7rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  white-space: pre;
+  font-family: 'JetBrains Mono', monospace;
+}
+

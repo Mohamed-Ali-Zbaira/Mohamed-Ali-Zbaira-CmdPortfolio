@@ -1,0 +1,17 @@
+.input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.command-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  flex-grow: 1;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-left: 0.75rem;
+}
+

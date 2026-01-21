@@ -1,0 +1,14 @@
+.command-history {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.command-history .prompt {
+  color: #666;
+}
+
+.command-history .command {
+  color: #888;
+}
+
