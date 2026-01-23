@@ -6,7 +6,7 @@ export const Bio = {
     "Software Engineer",
   ],
   description:
-    "Full-Stack Web Developer with a strong background in Angular, React.js, Node.js, and Laravel, and hands-on experience with Docker. Passionate about automation, cloud infrastructure, and modern development workflows, I aim to build secure, scalable, and efficient digital solutions while continuously enhancing my skills in DevOps and web technologies.",
+    "Full-Stack Web Developer with a strong background in Angular, React.js, Nest.js, and Laravel, and hands-on experience with Docker. Passionate about automation, cloud infrastructure, and modern development workflows, I aim to build secure, scalable, and efficient digital solutions while continuously enhancing my skills in DevOps and web technologies.",
   github: "https://github.com/Mohamed-Ali-Zbaira",
   resume:
     "https://drive.google.com/file/d/1v22hZ1ChjvTMgm40px8hMm2bkTcdjr1m/view?usp=sharing",

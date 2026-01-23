@@ -201,7 +201,7 @@ export const COMMANDS_DATA = {
   about:
     '<div class="terminal-header">MAINTAINER_PROFILE</div>' +
     `<strong>Name:</strong> <span class="hl">${Bio.name}</span><br/>` +
-    '<strong>Role:</strong> <span class="hl">Lead Fullstack Engineer & AI Specialist</span><br/><br/>' +
+    '<strong>Role:</strong> <span class="hl">Software Engineer & DevOps Specialist</span><br/><br/>' +
     '<div class="about-roles">' +
     Bio.roles.map(role => `  <span class="role-tag">${role}</span>`).join('') +
     '</div><br/>' +
@@ -220,10 +220,10 @@ export const COMMANDS_DATA = {
 
   skills:
     '<div class="terminal-header">TECHNICAL_MODULES</div>' +
-    '[FRONTEND] : React, Next.js, Angular, TypeScript, Tailwind<br/>' +
-    '[BACKEND]  : Node.js, Express, Laravel, Go<br/>' +
+    '[FRONTEND] : React, Next.js, Angular, TypeScript, bootstrap ,Tailwind<br/>' +
+    '[BACKEND]  : Node.js, Express, Laravel, Nest js<br/>' +
     '[DATABASE] : PostgreSQL, MongoDB, Redis, MySQL<br/>' +
-    '[DEVOPS]   : Docker, Kubernetes, GitLab CI/CD, AWS, Terraform',
+    '[DEVOPS]   : Docker, Kubernetes , ansible , CI/CD, AWS, Terraform',
 
   experience: generateExperienceHTML(),
 
