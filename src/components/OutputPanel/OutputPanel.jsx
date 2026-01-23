@@ -4,11 +4,33 @@ import './OutputPanel.css';
 const OutputPanel = ({ output }) => {
   const outputRef = useRef(null);
 
+  // Function to detect browser language and download appropriate CV
+  const handleDownloadCV = () => {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const cvPath = browserLang.startsWith('fr') 
+      ? '/Cv/CV-Mohamed-Ali-Zbaira-Fr.pdf' 
+      : '/Cv/CV-Mohamed-Ali-Zbaira-ANG.pdf';
+    
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = browserLang.startsWith('fr') 
+      ? 'CV-Mohamed-Ali-Zbaira-Fr.pdf' 
+      : 'CV-Mohamed-Ali-Zbaira-ANG.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     if (outputRef.current) {
-      outputRef.current.scrollTop = outputRef.current.scrollHeight;
+      outputRef.current.scrollTop = 0;
     }
   }, [output]);
+
+  // Expose function to global window for onclick handlers
+  useEffect(() => {
+    window.downloadCV = handleDownloadCV;
+  }, []);
 
   const welcomeMessage =
   '<div style="text-align: center; margin-bottom: 20px;">' +
@@ -27,14 +49,12 @@ const OutputPanel = ({ output }) => {
   '<div style="background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 12px; margin: 25px 0; border: 1px solid rgba(255, 107, 107, 0.3); text-align: center;">' +
   '<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">' +
   '<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">' +
-  '<a href="/resume.pdf" download style="text-decoration: none;">' +
-  '<div style="display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); color: white; padding: 14px 28px; border-radius: 10px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);" ' +
+  '<div onclick="window.downloadCV && window.downloadCV()" style="cursor: pointer; display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); color: white; padding: 14px 28px; border-radius: 10px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);" ' +
   'onmouseover="this.style.transform=\'translateY(-3px)\'; this.style.boxShadow=\'0 8px 25px rgba(255, 107, 107, 0.4)\'" ' +
   'onmouseout="this.style.transform=\'translateY(0)\'; this.style.boxShadow=\'0 4px 15px rgba(255, 107, 107, 0.3)\'">' +
   '<span style="font-size: 1.2em;">📄</span>' +
   '<span>Download Resume</span>' +
   '</div>' +
-  '</a>' +
   '<div style="color: #666; font-size: 0.9em; align-self: center;">or connect with me</div>' +
   '<div style="display: flex; gap: 15px; align-items: center;">' +
   '<a href="https://www.linkedin.com/in/mohamed-ali-zbaira/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">' +

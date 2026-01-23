@@ -2,6 +2,13 @@
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.prompt {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .command-input {
@@ -9,9 +16,11 @@
   border: none;
   color: #fff;
   outline: none;
-  flex-grow: 1;
+  flex: 1;
+  min-width: 0;
   font-family: inherit;
   font-size: 1rem;
-  margin-left: 0.75rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
 }
 

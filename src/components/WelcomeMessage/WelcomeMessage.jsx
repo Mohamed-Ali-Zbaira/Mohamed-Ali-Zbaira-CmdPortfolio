@@ -4,7 +4,7 @@ import './WelcomeMessage.css';
 const WelcomeMessage = () => {
   return (
     <div className="welcome-message">
-      M.A.ZBAIRA TERMINAL [{TERMINAL_INFO.version}]<br />
+      MOHAMED.ALI.ZBAIRA TERMINAL [{TERMINAL_INFO.version}]<br />
       System: {TERMINAL_INFO.system}<br />
       User: {TERMINAL_INFO.user}<br />
       Status: {TERMINAL_INFO.status}

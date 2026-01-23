@@ -5,7 +5,7 @@ import CommandHistory from '../CommandHistory/CommandHistory';
 import CommandInput from '../CommandInput/CommandInput';
 import './TerminalPanel.css';
 
-const TerminalPanel = ({ commandHistory, onCommandSubmit, inputRef }) => {
+const TerminalPanel = ({ commandHistory, onCommandSubmit, inputRef, currentPath }) => {
   const terminalRef = useRef(null);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const TerminalPanel = ({ commandHistory, onCommandSubmit, inputRef }) => {
         <AsciiArt />
         <WelcomeMessage />
         <CommandHistory commands={commandHistory} />
-        <CommandInput inputRef={inputRef} onCommandSubmit={onCommandSubmit} />
+        <CommandInput inputRef={inputRef} onCommandSubmit={onCommandSubmit} currentPath={currentPath} />
       </div>
     </div>
   );
